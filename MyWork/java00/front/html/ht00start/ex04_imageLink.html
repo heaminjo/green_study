@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>1. Image 와 경로</h2>
+    <pre><b>
+    1. 상대 경로
+    -> 현재 문서의 위치를 기준으로 시작하는 상대적인 경로
+      - 현재위치 : ./ 
+      - 한단계 상위 위치: ../
+    -> tag의 속성값을 표기할때 "", '', 없음 모두 허용  
+    </b>
+  </pre>
+
+    <!-- title : 마우스 커서를 올릴경우 사진의 제목이 띄워지도록한다 -->
+    <!-- alt : 이미지가 정상적으로 띄워지지않을 경우 이미지를 구분하기위한 문구 출출력 -->
+    <img
+      src="../../images/다운로드.jpg"
+      title="거북이"
+      alt="거북이 이미지입니다."
+      width="500"
+      height="200"
+    />
+    <img
+      src="../../images/거북.jpeg"
+      alt="거북이 실사 사진입니다."
+      title="거북이 실물"
+      width="200"
+      height="300"
+    />
+
+    <pre><b>
+      2. 절대경로
+      => 현재 컴퓨터 상의 전체경로 
+      => 라이브서버로 test하는 경우 : Image 폴더 기준
+      => 웹애플리케이션 내에서 실행하는 경우 : \프로젝트명
+    </b></pre>
+
+    <img src="\images\거북.jpeg" alt="" width="100" height="100" />
+
+    <pre><b>
+      3. Color 속성값
+      => colorName : Red
+      => 16진수 : #FF0000 , #0000FF
+      => RGB: (0~255, 0~255,0~255) CSS에서 적용
+      <font color ="red" size="5">Red</font>
+      <font color ="green" size="5">Red</font>
+      <font color ="blue" size="5">Red</font>
+    </b></pre>
+
+    <h3>4. Link : Page 이동</h3>
+    <!-- target _self : 현재 창에서 바로 주소 이동동 
+                _blank : 새로운 페이지를 띄워 주소 이동. -->
+    <a href="https://www.w3schools.com/colors/colors_groups.asp" target="_blank"
+      >[ColorPicker]</a
+    >
+
+    <a href="./ex01_hello.html">내가 만든 페이지</a>
+    <a href="http://naver.com ">naver</a><br />
+    <a href="https://www.google.com/">
+      <img
+        src="../../images/다운로드 (1).jpg"
+        alt="크롬 로고"
+        width="300"
+        height="150"
+      />
+    </a>
+  </body>
+</html>

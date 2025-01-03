@@ -12,10 +12,48 @@
       Paragraph => 단락을 구분 지어줌, 반복 사용해도 1회만 적용됌 => 단 br Tag는
       사용한 만큼 적용됌 내부에서 자동 줄바꿈은 안됌
     </p>
+    <!-- 웹 접근성을 높이기위해
+    누구에게나 공평하게 이 서비스를 쉽게 이용할수 있어야한다
+    시각장애인들 포함 -->
+
+    <!-- 중요한 내용 강조해야하는 내용을 읽어주는 리더기를 통해
+    시작장애인들도 웹 사이트를 이용할수 있게함 -->
+
+    <!-- 따라서 태그를 잘 구분해주는것이 좋다. -->
     dfn태그는 <dfn>용어 정의</dfn><br />
     EM Tag는 <em>부분 강조 용도</em><br />
     VAR Tag는 <var>변수 표시 용도</var><br />
     Strong Tag는 <strong>강함 강조</strong><br />
     Strike Tag는 <strike>삭제 표시 용도</strike>
+
+    <h3>2. 물리적 tag</h3>
+    <pre>
+      이 문자는 <b>굵은 글씨 b tag</b>
+      이 문자는 <b>굵은 글씨 b tag</b>
+      이 문자는 <i>이탤릭(기울임)_i tag</i>
+      이 문자는 <u>밑줄효과_u tag</u>
+      이 문자는 <center>중간정렬효과 tag</center>
+      이 문자는 <tt>타자기글씨체_tt tag</tt>
+      이 문자는 <sup>위첨자_sup tag</sup>
+      이 문자는 <small>조금작게_small tag</ㄴ>
+      이 문자는 <big>조금크게_big tag</big>
+      이 문자는 <sub>아래첨자_sub tag</sub>
+      이 문자는 <s>취소선_s</s>
+    </pre>
+
+    <h3>3. 특수문자(SpecialCharacter)</h3>
+    <!-- 
+      Enter : <br> , Space : &nbsp; 
+      <: &lt; , >: &gt; , &: &amp; , ": &quot; 
+      
+      <banana : 이렇게 < 이후 알파벳이 연결되면 tag로 인식되므로 
+      단순 컨텐츠로 출력할수 없기 때문에 이러한 표기법을 이용함.
+      -->
+      <b>
+      &lt;,&le;,&gt;,&ge;
+
+      &lt;input&gt;
+        
+    </b>
   </body>
 </html>
