@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* @import url(myStyle.css); */
+    </style>
+    <link rel="stylesheet" href="myStyle.css" />
+  </head>
+  <body>
+    <h2 id="title">css(cascading style sheets)</h2>
+    <p>
+      계층적 스타일시트, html tag(마크업 언어) 가 실제 표현되는 다양한 방법을
+      기술하는 스타일 언어 <br />
+      => W3C(www) 표준이고, 표준으로 정해진규칙<br />
+      => 레이아웃과 스타일 정의할때 자유도가 높다.
+    </p>
+    <h3>1. inLine Style</h3>
+    <p>
+      인라인 스타일은 태그에 style 속성(Attribute) 을 사용하여 스타일을
+      지정합니다. 그래서 인라인 스타일을 사용하면 내용과 표현이 섞이기 때문에
+      스타일을 사용하는 많은 장점(가독성 등) 을 잃을 수 있습니다. 그러나
+      <b>특정한 부분에만 스타일을 적용시키고자 할 경우</b> 사용할 수
+      있습니다.<br />
+    </p>
+
+    <h2>2. 내부(Internal) Style</h2>
+    <xmp>
+    내부 스타일 시트는 하나의 문서에서만 사용하는 스타일을 정의할 때 사용합니다.
+    내부 스타일은 <b>head 태그 영역에  style 태그를 이용하여</b> 정의합니다.
+    xmp Tag는 내부의 Tag는 적용되지 않으나 style은 적용됨.
+    </xmp>
+    <pre>
+    <b>pre Tag 와 xmp Tag</b> 를 비교 해 보세요~~
+    </pre>
+
+    <h2>3. 외부(External) Style **</h2>
+    <xmp>
+    외부 스타일 시트는 어떤 텍스트 에디터로든지 작성이 가능하며
+    확장자는 .css 로 저장하며,
+    외부 스타일시트 파일은 HTML 태그(선택자를 제외하고는) 를 포함할 수 없습니다.
+    <link> 태그 또는 style Tag 내에서 @import로 불러 사용 함.
+    </xmp>
+
+    <h2>4. Style 우선순위 **</h2>
+    <h3>인라인 > 내부스타일 > 외부문서스타일</h3>
+  </body>
+</html>
