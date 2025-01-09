@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UL & OL 목록 표시</title>
+  </head>
+  <style>
+    .big {
+      background-color: beige;
+      width: 300px;
+      border-radius: 20px;
+      padding: 50px;
+    }
+    .small {
+      background-color: bisque;
+    }
+    .small li {
+      background-color: aquamarine;
+    }
+  </style>
+  <body>
+    <h2>1. UL(UnorderedList, 순서없는 목록)</h2>
+    <ul type="square">
+      <li>사과</li>
+      <li>바나나</li>
+      <li>포도</li>
+      <li>배</li>
+    </ul>
+    <ul type="disc">
+      <li>사과</li>
+      <li>바나나</li>
+      <li>포도</li>
+      <li>배</li>
+    </ul>
+    <ul type="circle">
+      <li>사과</li>
+      <li>바나나</li>
+      <li>포도</li>
+      <li>배</li>
+    </ul>
+    <hr />
+    <ol type="1" start="101">
+      <li>사과</li>
+      <li>바나나</li>
+      <li>포도</li>
+      <li>배</li>
+    </ol>
+    <ol type="a">
+      <li>사과</li>
+      <li>바나나</li>
+      <li>포도</li>
+      <li>배</li>
+    </ol>
+    <ol type="i" start="">
+      <li>사과</li>
+      <li>바나나</li>
+      <li>포도</li>
+      <li>배</li>
+    </ol>
+
+    <h2>3. 계층구조 목록</h2>
+    <ul class="big">
+      <b>Menu</b>
+      <li>계절메뉴</li>
+      <li>
+        한식
+        <ul class="small">
+          <li>냉면</li>
+          <li>불고기</li>
+          <li>김밥</li>
+        </ul>
+      </li>
+      <li>
+        양식
+        <ol class="small">
+          <li>파스타</li>
+          <li>피자</li>
+          <li>
+            <a
+              href="https://map.naver.com/p/search/%EC%8A%A4%ED%85%8C%EC%9D%B4%ED%81%AC/place/1133391725?placePath=?entry=pll&from=nx&fromNxList=true&n_ad_group_type=10&n_query=%EC%8A%A4%ED%85%8C%EC%9D%B4%ED%81%AC&searchType=place&c=15.00,0,0,0,dh"
+              >스테이크</a
+            >
+          </li>
+        </ol>
+      </li>
+    </ul>
+  </body>
+</html>
