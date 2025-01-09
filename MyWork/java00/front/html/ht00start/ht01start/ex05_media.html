@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Audio Test</h2>
+    <!-- 하위태그에서도 src를 하게되면 소스를 두개 등록할수있다 -->
+    <!-- 첫번째 소스가 안될경우 두번째로 하는둥에 효율을 볼수있다. -->
+
+    <!-- controls="controls" : 재생도구 출력 여부 지정정-->
+    <audio controls="controls">
+      <source src="../../images/cat.mp4" />
+      <source src="../../images/Kalimba.mp3" />
+    </audio>
+
+    <h2>Video Test</h2>
+    <!-- autoplay="autoplay" : 재생버튼을 누르지않아도 재생되도록하는것 -->
+    <video controls="controls" width="640px" autoplay="autoplay">
+      <source src="../../images/cat.mp4" type="video/mp4" />
+    </video>
+  </body>
+</html>
