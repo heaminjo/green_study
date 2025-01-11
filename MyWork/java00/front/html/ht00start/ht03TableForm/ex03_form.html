@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form 기본 Tag</title>
+  </head>
+  <body>
+    <h2>Form, 회원가입</h2>
+    <form method="get">
+      <label for="id">아이디</label>
+      <input type="text" id="id" name="id" /><br />
+
+      <label for="pwd">패스워드</label>
+      <input type="password" id="pwd" name="pwd" /><br />
+
+      <label for="age">나이</label>
+      <input type="number" min="0" id="age" name="age" />
+
+      <hr />
+      동작 (서버로 전송 요청) <br />
+      <input type="submit" value="회원가입" />
+      <input type="reset" value="취소" />
+    </form>
+  </body>
+</html>
