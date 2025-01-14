@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>** Child(자식) & Descendent(후손) **</title>
+  </head>
+  <style>
+    #div1 > h4 {
+      color: blue;
+    }
+    /* 후손 */
+    #div2 h4 {
+      color: brown;
+    }
+    /* 합집합: id가 우선적용되어 div1의 child에는 적용되지않는다.  */
+    #div1 h4 {
+      color: green;
+    }
+    /* 교집합 */
+    h2.c1 {
+      font-style: italic;
+    }
+  </style>
+  <body>
+    <h2>1. Child(자식)</h2>
+    <div id="div1">
+      div1 Child Test1
+      <h4>div1_Child1</h4>
+      <h4>div1_Child1</h4>
+      <div>
+        div1_Child3
+        <h4>div1_손자1</h4>
+        <h4>div1_손자2</h4>
+      </div>
+    </div>
+
+    <h2 class="c1">2. Descendent(후손)</h2>
+    <div id="div2" class="c1">
+      div1 Descendent Test1
+      <h4>div2_Child1</h4>
+      <h4>div2_Child1</h4>
+      <div>
+        div2_Child3
+        <h4>div2_손자1</h4>
+        <h4>div2_손자2</h4>
+      </div>
+    </div>
+  </body>
+</html>

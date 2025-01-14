@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selector01</title>
+    <style>
+      /* Seiector 셀렉터 */
+      * {
+        /* color: slateblue; */
+        /* font-style: italic; */
+      }
+      /* Tag 단수 적용 */
+      body {
+        /* background-color: pink; */
+      }
+      /* Tag 복수 적용 */
+      h2,
+      h3 {
+        color: orange;
+      }
+      /* Form Tag 적용 */
+      input[type="text"] {
+        background-color: goldenrod;
+        width: 300px;
+      }
+      input[type="password"] {
+        background-color: black;
+      }
+      #idText {
+        color: green;
+        font-weight: bold;
+      }
+      .classText {
+        color: purple;
+        font-weight: bold;
+      }
+      /* class 셀렉터  */
+
+      /* .c3 {
+        color: tomato;
+      } */
+      .c1 .c2 {
+        color: blue;
+      }
+      .c2 {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <h2>hello</h2>
+    <h3>world</h3>
+    <h3>css</h3>
+    <form action="#">
+      ID : <input type="text" /><br />
+      PW : <input type="password" /><br />
+      Name : <input type="text" /><br />
+    </form>
+    <p id="idText">id 셀렉터</p>
+    <h3>5. Class</h3>
+    <h4 class="c1 c2">=> Html 문서내에서 여러개의 Tag를 인식</h4>
+    <h4 class="c1 c2">
+      => 문서내에서 중복을 허용하고, 하나의 Tag가 여러 클래스를 가질 수 있음
+    </h4>
+    <h4 class="c1 c2 c3">=> 스타일을 적용할때 많이 사용됨</h4>
+    <h4 class="c1 c3">=> 중복되는 속성은 뒤쪽 값이 우선</h4> -->
+
+    <h1 class="c2">hello</h1>
+    <ul class="c1">
+      **과일**
+      <li class="c2">사과</li>
+      <li class="c2">딸기</li>
+      <li class="c2">바나나</li>
+    </ul>
+  </body>
+</html>

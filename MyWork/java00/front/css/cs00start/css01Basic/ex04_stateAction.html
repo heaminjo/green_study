@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    input:enabled {
+      background-color: aquamarine;
+    }
+    input:disabled {
+      background-color: aqua;
+    }
+    input:focus {
+      background-color: black;
+    }
+
+    h3:hover {
+      color: red;
+    }
+    h3:active {
+      color: green;
+    }
+  </style>
+  <body>
+    <h2>1. 상태에 의한 선택</h2>
+    <h3>사용가능: enabled</h3>
+    <input /> default 값 적용 type=text, enabled 활성화
+
+    <h3>사용 불가능: disabled</h3>
+    <input disabled />
+
+    <h2>2. 동작에 의한 선택</h2>
+    <h3>Mouse Hover</h3>
+    <h3>Mouse Active</h3>
+  </body>
+</html>
