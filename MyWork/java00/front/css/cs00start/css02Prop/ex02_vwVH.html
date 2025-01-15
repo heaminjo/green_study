@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    /* html {
+      font-size: 30px;
+    } */
+    body {
+      font-size: 32px;
+    }
+    html {
+      font-size: 48px;
+    }
+    /* #container {
+      width: 50vw;
+      height: 50vh;
+      background-color: antiquewhite;
+    }
+    #test1 {
+      width: 200px;
+      height: 100px;
+      background-color: beige;
+      font-size: 2em;
+    }
+    #test2 {
+      width: 25vw;
+      height: 25vh;
+      background-color: aquamarine;
+      font-size: 1rem;
+    }
+    #p2 {
+      font-size: 1rem;
+    } */
+  </style>
+  <body>
+    <h2>반응형을 위한 css 단위</h2>
+    <pre>
+      => 기본 글자크기 16px
+      => %, em, rem, vw, vh
+      => em : 배수, 상위(Parent) Tag에 적용된 폰트크기가 기준이 됨. 
+              (이때 알파벳 M의 width를 기준으로 하는데서 유래하여 단위가 M의 발음인 em이 단위가 됨)
+      => rem : root + em
+               최상위 html Tag에 적용된 폰트의 사이즈가 기준이 됨.
+               (body의 속성보다 상위의 개념 즉, 기본크기가 기준이 됨)
+      => vw : viewPort width
+              view 의 width에 근거하여 1vw 는 width 의 1% 와 동일
+              (부모가 아닌 현재 보여지는 view 의 폭)  
+      => vh : viewPort height    
+              view 의 height 에 근거하여 1vh 는 height 의 1% 와 동일
+              (부모가 아닌 현재 보여지는 view 의 높이)         
+      </pre
+    >
+    <hr />
+    <!-- <div id="container">
+      Test
+      <div id="test1">Test1</div>
+      <div id="test2">Test2</div>
+    </div> -->
+    <p id="p1">기본값기준</p>
+    <p id="p2">Rem!</p>
+  </body>
+</html>

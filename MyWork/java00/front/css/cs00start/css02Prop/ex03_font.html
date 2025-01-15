@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <link rel="stylesheet" type="text/css" href="./myStyle.css" /> -->
+  </head>
+  <style>
+    * {
+      font-family: fantasy;
+    }
+    .f1 {
+      font-family: Arial;
+      font-size: small;
+      text-decoration: underline;
+    }
+    .f2 {
+      font-family: test, myfont, fantasy, 맑은고딕;
+      font-size: 15pt;
+    }
+    .h3 {
+      font-family: Times New Roman;
+      font-size: 15pt;
+      font-weight: bold;
+    }
+    .f4 {
+      font-style: italic;
+      font-stretch: wider;
+      text-decoration: line-through;
+    }
+  </style>
+  <body>
+    <h2>Font</h2>
+
+    <p class="f1">Font Test1 : f1</p>
+    <p class="f1 f2">Font Test2 : f1 f2</p>
+
+    -> 동일 속성의 경우 뒤쪽에 작성된 코드가적응
+    <p class="f3">Font Test3 :f3</p>
+    <p class="f4 f3">Font Test4 : f3 f4</p>
+
+    <h2>Button & LineHeight</h2>
+    <div class="btn">
+      <a href="http://naver.com">Naver</a>
+    </div>
+    <div class="btn f1">
+      <span>Naver</span>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>color & size</title>
+  </head>
+  <style>
+    /* body 기준으로 2번째 child */
+    h3:nth-child(2) {
+      color: red;
+    }
+    h3:nth-child(3) {
+      color: #ff0000;
+    }
+    h3:nth-child(4) {
+      color: rgb(255, 0, 0);
+    }
+    h3:nth-child(5) {
+      color: rgb(100%, 0%, 0%);
+    }
+
+    #p1 {
+      font-size: 16px;
+    }
+    #p2 {
+      font-size: 24pt;
+      opacity: 0.2;
+    }
+    #p3 {
+      font-size: 3pc;
+      opacity: 0.4;
+    }
+    #p4 {
+      font-size: 4em;
+      opacity: 0.6;
+    }
+    #p5 {
+      font-size: 500%;
+      opacity: 0.8;
+    }
+    div {
+      transform: rotate(10deg);
+      background-color: antiquewhite;
+    }
+  </style>
+  <body>
+    <h2>Color</h2>
+
+    <h3>색상 이름으로 표기</h3>
+    <h3>16진수로 표기</h3>
+    <h3>RGB 값으로 표기 (10진수)</h3>
+    <h3>RGB 값으로 표기 (백분율 %)</h3>
+
+    <h2>color 투명도</h2>
+    <h3>opacity : 0 ~ 1 사이의 소숫점 숫자값을 통해 투명도 지정한다</h3>
+
+    <h2>size 단위</h2>
+    <div style="display: flex; gap: 20px">
+      <p id="p1">px(기본)</p>
+      <p id="p2">pt(2배)</p>
+      <p id="p3">pc(3배)</p>
+      <p id="p4">em(4배)</p>
+      <p id="p5">%(5배)</p>
+    </div>
+
+    <h2>Degree 기울임 각도</h2>
+    <div>=> transform: rotate(10deg)</div>
+  </body>
+</html>
