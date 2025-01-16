@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: #ddd;
+      }
+      .container {
+        width: 400px;
+        height: 600px;
+        background-image: url(../../images/juju.png);
+        margin: 100px;
+        background-color: #fff;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: unset;
+      }
+
+      p {
+        color: red;
+      }
+      p:not(#p3) {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="p1">1</p>
+    <p id="p2">2</p>
+    <p id="p3">3</p>
+  </body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    tr {
+      height: 40px;
+    }
+    th {
+      width: 100px;
+      text-align: start;
+    }
+    label {
+      display: block;
+      padding: 10px;
+    }
+    label span {
+      display: inline-block;
+      width: 100px;
+      padding: 10px;
+    }
+
+    input[type="text"] {
+      color: red;
+      border: 2px solid skyblue;
+      padding: 5px;
+      border-radius: 10px;
+    }
+    input[type="text"]:hover {
+      background-color: skyblue;
+    }
+    input[type="text"]:focus {
+      font-size: 1.1em;
+    }
+  </style>
+  <body>
+    <h2>form style</h2>
+    <hr />
+    <!-- <form action="">
+      <table>
+        <tr>
+          <th>
+            <label for="name">Name</label>
+          </th>
+          <td>
+            <input type="text" id="name" placeholder="10자 이내로" />
+          </td>
+        </tr>
+        <tr>
+          <th>
+            <label for="email">Email</label>
+          </th>
+          <td><input
+            type="text"
+            id="email"
+            placeholder="이메일 형식으로 입력"
+          /></td>
+        </tr>
+        <tr>
+        <th><label for="message">Message</label> </th>      </th>
+        <td><textarea placeholder="Message를 남겨주세요" id="message"></textarea
+          ></td>
+        </tr>
+        <tr>
+          <input type="submit" value="Submit" />
+        </tr> 
+      </table>
+    </form> -->
+    <form>
+      <label for="name"
+        ><span>name</span>
+        <input type="text" placeholder="한글 영문 10글자 까지 가능" id="name" />
+      </label>
+      <label for="email"
+        ><span>Email</span>
+        <input type="text" placeholder="green@green.com 형식" id="email" />
+      </label>
+      <label for="message"
+        ><span>Message</span>
+        <textarea
+          placeholder="Message 를 남겨주세요 ~~"
+          id="message"
+        ></textarea>
+      </label>
+      <label><span></span><input type="submit" value="Submit" /></label>
+    </form>
+  </body>
+</html>

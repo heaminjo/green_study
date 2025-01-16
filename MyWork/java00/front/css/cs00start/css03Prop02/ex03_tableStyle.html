@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table {
+        width: 500px;
+        border: 5px solid blue;
+        border-collapse: collapse;
+      }
+      td,
+      th {
+        border: 2px dotted green;
+        height: 30px;
+        padding: 10px;
+        text-align: center;
+      }
+      thead,
+      tfoot {
+        background-color: lightgray;
+        color: navy;
+      }
+      tbody tr:nth-child(2n) {
+        background-color: #bbb;
+      }
+      tbody tr:hover {
+        background-color: #000;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>성적표</h2>
+    <hr />
+    <table>
+      <thead>
+        <tr>
+          <th>이름</th>
+          <th>HTML</th>
+          <th>CSS</th>
+        </tr>
+      </thead>
+      <tfoot>
+        <tr>
+          <th>합계</th>
+          <th>370</th>
+          <th>350</th>
+        </tr>
+      </tfoot>
+      <tbody>
+        <tr>
+          <td>홍길동</td>
+          <td>90</td>
+          <td>70</td>
+        </tr>
+        <tr>
+          <td>김길동</td>
+          <td>80</td>
+          <td>70</td>
+        </tr>
+        <tr>
+          <td>이길동</td>
+          <td>90</td>
+          <td>70</td>
+        </tr>
+        <tr>
+          <td>오길동</td>
+          <td>90</td>
+          <td>70</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

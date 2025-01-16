@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .test1 {
+      background: gold;
+      padding: 10px 10px 10px 30px;
+      list-style-position: outside;
+      list-style-type: decimal-leading-zero;
+      list-style-image: url(../../images/b_main);
+    }
+    .test li {
+      background-color: magin 5px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    #menubar {
+      background: yellowgreen;
+      width: 100%;
+    }
+    #menubar ul li {
+      display: inline-block;
+      padding: 0 15px;
+      width: 70px;
+    }
+    a {
+      color: white;
+      text-decoration: none;
+    }
+    a:hover {
+      color: black;
+      font-size: 1.2em;
+    }
+  </style>
+  <body>
+    <ul class="test1">
+      <li>Home</li>
+      <li>Login</li>
+      <li>Join</li>
+      <li>게시판</li>
+    </ul>
+    <br />
+    <h2>메뉴 활용</h2>
+    <nav id="menubar">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="">Login</a></li>
+        <li><a href="">Join</a></li>
+        <li><a href="">게시판</a></li>
+      </ul>
+    </nav>
+  </body>
+</html>
