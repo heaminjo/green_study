@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script src="./myCode.js"></script>
+  <script>
+    function imageChange(){
+      alert('dsd');
+    }
+  </script>
+  <body>
+    <h3>
+      <pre>
+      <!-- javaScript Start
+      => 이벤트 리스너 속성에 JS코드 작성하기
+
+      1. Apple 클릭
+    
+      <img
+      src="../../images/greenApple.jpg"
+      onclick="this.src='../../images/bbabba.png'"
+    /> -->
+
+    2. Apple에 마우스 올리기
+    <img src="../../images/greenApple.jpg" 
+    onmouseover="this.src='../../images/bbabba.png'"
+    onmouseout="this.src='../../images/greenApple.jpg'">
+
+      
+    3.Toggle 방식 : function적용
+    <img id="image" src="../../images/greenApple.jpg" onclick="imageChange(src)">
+
+    <a href="http://naver.com" onclick="imageChange()">onclick_Test</a>
+    
+        
+    4. 외부문서 사용 
+    모든 text 에디터 사용가능하며 , 확장자는 반드시 js로한다.
+    <img src="../../images/greenApple.jpg" 
+    onmouseover="over(this)"
+    onmouseout="out(this)">
+        
+          => href에 자바스크립트 작성 -->
+
+
+
+
+
+
+    <a href="javascript:alert('a Tag로부터 발생되었습니다.')">클릭</a>
+  </pre>
+
+  </body></h3>
+</html>

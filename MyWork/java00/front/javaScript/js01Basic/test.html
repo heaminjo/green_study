@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      border: none;
+      text-decoration: none;
+      font-size: 14px;
+      color: #171717;
+    }
+    .inner {
+      margin: 0 auto;
+    }
+    li {
+      list-style: none;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    .nav > ul {
+      display: flex;
+    }
+    header {
+      width: 100%;
+      height: 130px;
+      background-color: aliceblue;
+      position: fixed;
+    }
+    header .inner {
+      width: 73%;
+      height: 100%;
+      position: relative;
+    }
+    .logo {
+      position: absolute;
+      top: 50%;
+      margin-top: -40px;
+    }
+    .h_top {
+      display: flex;
+      gap: 20px;
+      line-height: 60px;
+      justify-content: end;
+      margin-right: 40px;
+      height: 60px;
+    }
+    /* nav */
+    #util_nav > ul {
+      justify-content: end;
+    }
+    #util_nav li:not(:last-child)::after {
+      content: "|";
+      color: #ccc;
+    }
+    #util_nav a {
+      color: #464545;
+      padding-left: 5px;
+    }
+    #util_nav a:hover {
+      text-decoration: underline;
+    }
+    #util_nav li #service_nav {
+      height: 70px;
+      line-height: 30px;
+    }
+    #service_nav > ul {
+      justify-content: end;
+      height: 100%;
+    }
+    #service_nav a {
+      color: #171717;
+      padding: 10px 23px 46px;
+    }
+    #service_nav a:hover {
+      color: green;
+      text-decoration: underline;
+      background-color: #171717;
+    }
+    /* 검색  */
+    .search {
+      width: 30px;
+      height: 30px;
+      margin-top: 15px;
+      background-color: #fff;
+      position: relative;
+      border: 1px solid #999;
+      border-radius: 5px;
+
+      transition: all 1s;
+    }
+    .search img {
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      left: 5px;
+      top: 5px;
+    }
+  </style>
+  <script>
+    function searchBox() {}
+  </script>
+  <body>
+    <div class="container">
+      <header>
+        <div class="inner">
+          <h1 class="logo">
+            <a title="스타벅스 홈페이지" href="#">
+              <img src="../../images/logo.png" alt="" />
+            </a>
+          </h1>
+          <div class="h_top">
+            <nav class="nav" id="util_nav">
+              <ul>
+                <li>
+                  <a href="">Sign In</a>
+                </li>
+                <li>
+                  <a href="">My Starbucks</a>
+                </li>
+                <li>
+                  <a href="">Customer Service & Ideas</a>
+                </li>
+                <li>
+                  <a href="">Find a Store</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="search" id="searchBox">
+              <a href="">
+                <img src="../../images/search.png" alt="검색" />
+              </a>
+            </div>
+          </div>
+          <nav class="nav" id="service_nav">
+            <ul>
+              <li>
+                <a href="">COFFEE</a>
+              </li>
+              <li>
+                <a href="">MENU</a>
+              </li>
+              <li>
+                <a href="">STORE</a>
+              </li>
+              <li>
+                <a href="">RESPONSOBILITY</a>
+              </li>
+              <li>
+                <a href="">STARBUCKS REWARDS</a>
+              </li>
+              <li>
+                <a href="">CORPORATE SALES</a>
+              </li>
+              <li>
+                <a href="">WHAT'S NEW</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+    </div>
+  </body>
+</html>
