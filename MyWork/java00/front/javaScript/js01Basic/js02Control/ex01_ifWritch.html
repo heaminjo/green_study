@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      now = new Date();
+      now = now.getMonth() + 1;
+
+      if (now >= 3 && now <= 5) alert("봄");
+      else if (now >= 6 && now <= 8) alert("여름");
+      else if (now >= 9 && now <= 11) alert("가을");
+      else alert("겨울");
+
+      if (now == 3 || now == 4 || now == 5) alert("봄");
+      else if (now == 6 || now == 7 || now == 8) alert("여름");
+      else if (now == 9 || now == 10 || now == 11) alert("가을");
+      else if (now == 12 || now == 1 || now == 2) alert("겨울");
+
+      switch (now) {
+        case 3:
+        case 4:
+        case 5:
+          document.write("봄");
+          break;
+        case 6:
+        case 7:
+        case 8:
+          document.write("여름");
+          break;
+        case 9:
+        case 10:
+        case 11:
+          document.write("겨울");
+          break;
+        case 12:
+        case 2:
+        case 1:
+          document.write("겨울");
+          break;
+      }
+
+      if (now % 2 == 0) {
+        switch (now) {
+          case 3:
+          case 4:
+          case 5:
+            document.write("봄");
+            break;
+          case 6:
+          case 7:
+          case 8:
+            document.write("여름");
+            break;
+          case 9:
+          case 10:
+          case 11:
+            document.write("겨울");
+            break;
+          case 12:
+          case 2:
+          case 1:
+            document.write("겨울");
+            break;
+        }
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

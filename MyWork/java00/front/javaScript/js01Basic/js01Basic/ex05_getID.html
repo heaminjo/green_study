@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script>
+    function textColor() {
+      let t = document.getElementById("test1");
+
+      if (t.style.color == "blue") {
+        t.style.color = "green";
+      }
+    }
+
+    function inputClick() {
+      let num1 = document.getElementById("n1").value;
+      let num2 = document.getElementById("n2").value;
+
+      document.getElementById("n3").value = parseInt(num1) + parseInt(num2);
+    }
+  </script>
+
+  <script>
+    function changeImg() {
+      let img = document.getElementById("image");
+
+      console.log(`${img.src}`);
+      if (img.src.match("images/bear.gif")) {
+        img.src = "../../images/greenApple.jpg";
+      } else {
+        img.src = "../../images/kiwi.jpg";
+      }
+    }
+  </script>
+  <script>
+    function contentTest() {
+      let bc = document.getElementById("btn").innerHTML;
+
+      document.getElementById("btn").innerHTML =
+        document.getElementById("clock").innerHTML;
+
+      document.getElementById("clock").innerHTML = bc;
+    }
+
+    function setClock() {
+      let now = new Date();
+      let dt = `Now : ${now.getFullYear()}년 ${
+        now.getMonth() + 1
+      }월 ${now.getDay()}일 ${now.getHours()}시 ${now.getMinutes()}분 ${now.getSeconds()}초`;
+      document.getElementById("clock").innerHTML = dt;
+    }
+
+    function setTimeoutTest() {
+      setClock();
+      setTimeout("setTimeoutTest()", 1000);
+    }
+  </script>
+
+  <body onload="setTimeoutTest()">
+    <pre><h3>
+
+    <span id="test1" style="color:blue">중복된 값 1</span>
+    <span id="test1" style="color:red">중복된 값 2</span>
+
+    <button onclick="textColor()">TextColorChange</button>
+
+    <label for="n1">number1</label>
+    <input type="number" id="n1" value="100">
+    <label for="n2">number2</label>
+    <input type="number" id="n2" value="200">
+     
+    <label for="n3">result</label>
+    <input type="number" id="n3" readonly>
+
+    <button onclick="inputClick()">연산</button>
+
+    <img src="../../images/bear.gif" onclick="changeImg()" width="100" height="100" id="image" alt="">
+
+    <button id="btn" onclick="contentTest()">contents 교환</button>
+    <span id="clock" onclick="setClock()">Now_Span</span>
+    <span id="sige" onclick="setTimeoutTest()">시계</span>
+
+  </h3></pre>
+  </body>
+</html>

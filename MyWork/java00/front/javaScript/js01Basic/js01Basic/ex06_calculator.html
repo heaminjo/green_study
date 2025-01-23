@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // 전역 변수
+      // -> Script
+      let expression = "";
+      let result = 0;
+
+      function input(n) {
+        expression += n;
+        document.getElementById("display").value = expression;
+      }
+
+      function compute() {
+        expression = document.getElementById("display").value;
+        result = eval(expression);
+        document.getElementById("display").value = result;
+        expression = result;
+      }
+
+      function backSpace() {
+        let s = document.getElementById("display").value;
+        expression = s.substr(0, s.length - 1);
+        document.getElementById("display").value = expression;
+      }
+      function clearExpression() {
+        expression = "";
+        result = 0;
+        document.getElementById("display").value = 0;
+      }
+    </script>
+  </head>
+
+  <style>
+    button {
+      width: 50px;
+      height: 30px;
+    }
+  </style>
+  <body>
+    <h3>내장함수 eval 을 이용한 계산기</h3>
+    <hr />
+    display: <br />
+    <input id="display" value="0" size="25" />
+    <br />
+    <br />
+    <button onclick="input('7')">7</button>
+    <button onclick="input('8')">8</button>
+    <button onclick="input('9')">9</button>
+    <button onclick="input('/')">/</button>
+    <br />
+    <button onclick="input('4')">4</button>
+    <button onclick="input('5')">5</button>
+    <button onclick="input('6')">6</button>
+    <button onclick="input('*')">*</button>
+    <br />
+    <button onclick="input('1')">1</button>
+    <button onclick="input('2')">2</button>
+    <button onclick="input('3')">3</button>
+    <button onclick="input('-')">-</button>
+    <br />
+    <button onclick="input('0')">0</button>
+    <button onclick="input('+')">+</button>
+    <button onclick="input('(')">(</button>
+    <button onclick="input(')')">)</button>
+    <br />
+    <button onclick="clearExpression()">Clear</button>
+    <button onclick="backSpace()"><--</button>
+    <button onclick="compute()" style="width: 105px">Enter</button>
+  </body>
+</html>
