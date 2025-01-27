@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script>
+    "use strict";
+
+    // let arr = ["가", "나", "다", "라", "마"];
+    // let num1 = [1, 2, 3, 4, 5];
+
+    // let num2 = new Array(10, 20, 30, 40, 50);
+
+    // let result = 0;
+    // for (let i = 0; i < num2.length; i++) {
+    //   result += num2[i];
+    // }
+    // document.write(result);
+    let week = new Array(7);
+
+    week[0] = "일";
+    week[1] = "월";
+    week[2] = "화";
+    week[3] = "수";
+    week[4] = "목";
+
+    document.write(`넣기 전 :${week.length} <br>`);
+    week[9] = "??";
+    document.write(`넣은 후 :${week.length}<br>`);
+
+    for (let str in week) {
+      document.write(str);
+    }
+
+    week.length = 3;
+
+    for (let str of week) {
+      document.write(str);
+    }
+  </script>
+  <body></body>
+</html>

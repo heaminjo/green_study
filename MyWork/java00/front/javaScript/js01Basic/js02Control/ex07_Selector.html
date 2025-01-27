@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script>
+    let global = 10;
+    function tagNameTest() {
+      // let p = document.getElementsByTagName("p");
+      // document.write(p[0].innerHTML);
+    }
+    function classNameTest() {
+      let c = document.getElementsByClassName("ctest");
+
+      alert(`${c[0].innerHTML} , ${c[1].innerHTML}`);
+    }
+
+    function querySelectorTest() {
+      let h = document.querySelector("h4");
+      document.write(h.innerHTML);
+    }
+
+    function querySelectorAllTest() {
+      let a = document.querySelectorAll(".ctest");
+
+      for (let i = 0; i < a.length; i++) {
+        a[i].style.color = "red";
+        a[i].innerText += `<p>gd</p>`;
+      }
+    }
+
+    function scopeTest() {
+      // let global = 100;
+      // alert(this.global);
+
+      let sum = 0;
+      for (let i = 1; i <= 10; i++) {
+        sum += i;
+      }
+      document.write({ sum }, i);
+    }
+    scopeTest();
+
+    function colorChange() {
+      let alls = document.querySelectorAll("body>*:nth-child(2n)");
+      for (let i = 0; i < alls.length; i++) {
+        alls[i].style.color = "Green";
+      }
+    }
+    colorChange();
+  </script>
+  <body onload="colorChange()">
+    <div>hello</div>
+    <div>hello</div>
+    <div>hello</div>
+    <div>hello</div>
+    <div>hello</div>
+  </body>
+</html>

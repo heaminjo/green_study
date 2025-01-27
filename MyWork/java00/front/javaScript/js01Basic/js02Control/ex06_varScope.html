@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script>
+    // name = "홍길동";
+    // document.write(name);
+
+    // var a = 100;
+    // let b = 200;
+    // const c = 300;
+    // d = 400; //묵시적 선언
+
+    // document.write(delete x);
+    // document.write(delete y);
+    // document.write(delete A);
+    // document.write(delete b);
+
+    // let colors = ["red", "green", "blue", "whit"];
+    // document.write(`삭제 전 : ${colors[3]}`);
+    // delete colors[3];
+    // document.write(`삭제 후 : ${colors[3]}`);
+    // let car = {
+    //   brand: "현대",
+    //   color: "Silver",
+    //   price: 100,
+    // };
+
+    // delete car.brand;
+    // document.write(`${car.brand} <br> ${car.color}`);
+
+    document.write(x);
+    let x = 100;
+  </script>
+  <body>
+    <hr />
+    <pre><h3>
+  ** Variable 선언과 적용범위 ***
+
+  1. 선언
+  1.1) 변수
+    => var : 재선언가능, 재할당가능 
+    => let : 재선언불가능, 재할당가능 
+  1.2) 상수
+    => const : 재선언불가능, 재할당불가능
+        
+  1.3) 묵시적 정의 ( var, let, const 없이 정의 )
+    => 전역변수의 경우
+    => 차이점
+      delete 가 적용됨 (변수와 값이 메모리에서 삭제됨)    
+      명시적 선언시에는 delete가 적용되지않고, 변수와 값이 메모리에 보존됨 
+  1.4) delete
+    => 변수의 정의를 취소함
+    => var, let, const 로 정의한 변수에는 적용되지 않고,
+      정의없이(묵시적으로) 사용한 변수에만 적용됨. 
+
+      //*** JavaScript에서 호이스팅(hoisting)
+      //   인터프리터가 변수와 함수의 메모리 공간을 선언 전에 미리 할당하는 것을 의미함.
+      //   그러므로 선언전에 사용해도 오류가 발생하지 않기 때문에 호이스팅이 일어나지 않는 let 을 권장
+      //=> TDZ (Temporal Dead Zone)
+      //   변수가 선언되고 초기화 되기전까지 해당변수의 사용을 금지하는 구역
+      //   ( var의 호이스팅으로 일어나는 문제점을 사전차단하는 개념으로 var에는 적용되지않고,
+      //     let, const 에는 적용되어 선언전에 사용하면 에러 발생함 -> 그러므로 호이스팅이 일어나지 않게됨.   
+      
+      //=> 호이스트(hoist , 들어올리다)
+      //   건축/건설이나 화물 운반에 사용되는 장비로 화물 등을 들어올리는 업무를 수행
+      //   즉, 아래에 위치한 것을 위로 끌어올리는 역할을 하는 장비를 말함.  
+  </h3></pre>
+  </body>
+</html>

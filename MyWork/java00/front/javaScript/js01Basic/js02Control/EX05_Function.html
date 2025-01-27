@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script>
+    "use srtict";
+
+    // function first1(x) {
+    //   return x + x;
+    // }
+    // function first2(x) {
+    //   document.write(x + x);
+    // }
+    // first1(5);
+    // first2(5);
+
+    let noName = function (a) {
+      document.write(`익명함수 a = ${a}<br>`);
+    };
+
+    // noName(10);
+    // noName(15);
+
+    // document.write(`type of(선언적 함수) => ${typeof first2(5)}<br>`);
+    // document.write(`type of => ${typeof noName(5)}`);
+
+    function callTenTimes(apple) {
+      for (let i = 0; i < 5; i++) {
+        document.write(i);
+        apple(); //apple은 함수이며 인자를 통해 함수를 call
+      }
+    }
+
+    function back() {
+      document.write("선언적 CallBack 함수");
+    }
+    back();
+
+    callTenTimes(back);
+
+    //사람의 동작(movement)을 제어
+    function person(movement, clock) {
+      document.write(`나는 지금 `);
+      movement(clock);
+    }
+
+    //밥 먹는 동작
+    function eat(clock) {
+      document.write(`${clock}시에 밥 먹는중이다`);
+    }
+    //공부하는 동작
+    function study(clock) {
+      document.write(`${clock}시에 공부 하는 중이다.<br>`);
+    }
+
+    //call 호출
+
+    //3시에 밥 먹고 싶다
+    person(eat, 3);
+
+    //6시에 공부하고 싶다
+    person(study, 6);
+
+    person(noName);
+
+    person(function (mood) {
+      document.write(mood);
+    }, "신난다");
+  </script>
+  <body>
+    <pre><h3>
+    <hr>
+    1.2323.
+  </h3></pre>
+  </body>
+</html>

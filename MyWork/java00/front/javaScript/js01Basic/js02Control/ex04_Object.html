@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script>
+    let myObject = {
+      name: "조해민",
+      age: 24,
+      height: 161.3,
+      hobby: new Array("독서", "야구", "잠"),
+    };
+    // document.write(`name : ${myObject.name} <br>
+    //                 age: ${myObject.age} <br>
+    //                 height: ${myObject.height} <br>
+    //                 hobby: ${myObject.hobby[2]}`);
+
+    // for (let m of myObject) {
+    //   document.write(m);
+    // }
+
+    let student = {
+      name: "조해민",
+      age: 24,
+      score: 100,
+      study: function (name) {
+        document.write(`${name}는 공부즁`);
+      },
+      all: function (name) {
+        this.study(name);
+      },
+    };
+
+    document.write(`${student.name} 학생 정보<br>`);
+    document.write(`나이:${student.age} 학생 정보<br>`);
+    document.write(`점수:${student.score} 학생 정보<br>`);
+    student.study();
+    student.all("홍길동");
+  </script>
+  <body>
+    <hr />
+    <h3>
+      <pre>
+    ** Object(객체) 선언, 출력, this **
+    => Object(객체): 속성과 동작을 가짐
+
+    1) 객체의 정의 (리터럴표기법)
+    2) 객체출력
+      => 간편출력 for 구문 : of, in
+      => in : 배열(index Return), 객체(속성명 Return)
+      => of 는 객체에 적용안됨
+    3) 객체의 다양한 특성  (function, this..)    
+      => 객체의 속성(property)의 값으로 function을 정의할수 있고 이때에는 익명으로함 (익명함수) 
+        => 객체의 속성의 값이 기본자료형인 경우에는 객체의 속성 이라하고, 
+          function으로 정의된 경우에는 객체의 메서드(method)라 함.  
+  </pre
+      >
+    </h3>
+  </body>
+</html>

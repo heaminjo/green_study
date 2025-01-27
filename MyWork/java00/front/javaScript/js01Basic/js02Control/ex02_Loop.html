@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script>
+    // for (let i = 10; i <= 35; i += 5) {
+    //   document.write(
+    //     `<span id="text" style='color:blue;font-size:${i}px;'>글꼴크기</span>`
+    //   );
+    // }
+
+    // result = 0;
+    // for (let i = 0; i <= 100; i += 3) {
+    //   if (i % 45 == 0) {
+    //     continue;
+    //   }
+    //   result += i;
+    // }
+    // document.write(result);
+
+    // time = 0;
+    // function setTime() {
+    //   time += 1;
+    // }
+    // while (true) {
+    //   setTimeout(setTime(), 2000);
+    //   if (time == 1) {
+    //     break;
+    //   }
+    //   console.log(time);
+    // }
+    result = 1;
+    let start = new Date().getTime();
+    while (true) {
+      if (new Date().getDate() > start + 1000) break;
+      console.log("gd");
+    }
+  </script>
+  <body>
+    <!-- //=> 실습
+    //  <span> Tag 에 font크기를 10px ~ 35px 까지 5px씩 증가시키면서
+    //  font 크기 출력하기 -->
+    <!-- <span id="text" style='color:blue;font-size:10px;'>글꼴크기</span>     -->
+  </body>
+</html>
