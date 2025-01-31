@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <img
+      id="image"
+      src="../../images/greenApple.jpg"
+      alt=""
+      width="200"
+      height="200"
+    /><br />
+    <button onclick="imageSizeUp()">확대</button>
+    <button onclick="imageSizeDown()">축소</button>
+    <h3>
+      <pre>
+    ** Image Size 조정하기 **
+    => 버튼1 : 이미지의 현재 크기를 10씩 커지는 버튼 
+          10번 이상 연속해서 클릭하면 alert 으로 경고 메시지 출력하기
+          ('~~ 연속 10회 이상은 클릭할 수 없습니다 ~~')  
+    => 버튼2 : 이미지의 현재 크기를 10씩 10번 작아지는 버튼 
+          10번 이상 연속해서 클릭하면 alert 으로 경고 메시지 출력하기 
+          음수 이면 경고 메시지 (~~ 최소 크기 입니다 ~~) 
+  </pre
+      >
+    </h3>
+  </body>
+
+  <script>
+    let upCount = 0;
+    let downCount = 0;
+
+    let image = document.getElementById("image");
+    function imageSizeUp() {
+      if (upCount == 10) {
+        alert("연속 10회 이상은 클릭할 수 없습니다.");
+      } else {
+        downCount = 0;
+        upCount++;
+
+        image.style.width = `${image.offsetWidth + 10}px`;
+        image.style.height = `${image.offsetHeight + 10}px`;
+      }
+    }
+
+    function imageSizeDown() {
+      if (downCount == 10) {
+        alert("연속 10회 이상은 클릭할 수 없습니다.");
+      } else if (image.offsetWidth == 10) {
+        alert("최소 크기 입니다.");
+      } else {
+        upCount = 0;
+        downCount++;
+        image.style.width = `${image.offsetWidth - 10}px`;
+        image.style.height = `${image.offsetHeight - 10}px`;
+      }
+    }
+  </script>
+</html>

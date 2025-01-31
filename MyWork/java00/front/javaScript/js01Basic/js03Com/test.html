@@ -4,10 +4,57 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script>
-      alert(check);
-      const check = 10;
-    </script>
+    <script></script>
+    <script></script>
   </head>
-  <body></body>
+  <body>
+    <!-- <div onclick="alert('첫번째 div')">
+      1
+      <div onclick="alert('두번째 div')">
+        2
+        <div onclick="alert('세번째 div')">3</div>
+      </div>
+    </div> -->
+    <div id="first">
+      1
+      <div id="second">
+        2
+        <div id="third">3</div>
+      </div>
+    </div>
+
+    <div onclick="event.target.style.color='red'">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+    </div>
+  </body>
+  <script>
+    let first = document.getElementById("first");
+    let second = document.getElementById("second");
+    let third = document.getElementById("third");
+
+    first.addEventListener(
+      "click",
+      () => {
+        alert("first");
+      },
+      true
+    );
+    second.addEventListener(
+      "click",
+      () => {
+        alert("second");
+      },
+      true
+    );
+    third.addEventListener(
+      "click",
+      () => {
+        alert("third");
+      },
+      true
+    );
+  </script>
 </html>

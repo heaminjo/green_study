@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script>
+    function hello(e) {
+      alert(e.type + e.target + e.defaultPrevented);
+    }
+    onload = () => {
+      let t = document.getElementById("trad");
+      t.onclick = (e) => {
+        e.target.style.color = "red";
+        e.target.innerHTML = "hello";
+
+        console.log(`e.pageX = ${e.pageX}, e.pageY ${e.pageY}`);
+        console.log(`e.clientX= ${e.clientX}, e.clientY ${e.clientY}`);
+      };
+    };
+    onload = () => {
+      let aTag = document.getElementById("remove");
+      aTag.onclick = function (e) {
+        // e.preventDefault();
+        alert(e.defaultPrevented);
+        e.stopPropagation();
+      };
+    };
+  </script>
+  <body onclick="alert('body 전달')">
+    <pre onclick="alert('pre 전달')">
+    <h3 onclick="alert('h3 전달 ')">
+      <button id="trad">인사</button>
+      <a href="https://naver.com" target="_blank" id="remove">remove</a>
+      <input type="checkbox" id="check">
+    </h3>
+  </pre>
+  </body>
+  <script>
+    let check = document.getElementById("check");
+    check.onclick = function (e) {
+      alert(e.defaultPrevented);
+
+      e.preventDefault();
+    };
+  </script>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>** 이벤트 흐름 (전파, Event Propagation) **</title>
+
+    <style>
+      #ancestor,
+      #parent,
+      #child {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #ancestor {
+        width: 300px;
+        height: 300px;
+        background-color: green;
+      }
+
+      #parent {
+        width: 200px;
+        height: 200px;
+        background-color: orange;
+      }
+
+      #child {
+        width: 100px;
+        height: 100px;
+        background-color: brown;
+      }
+
+      section {
+        margin-left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>** 이벤트 흐름 (전파, Event Propagation) **</h3>
+    <hr />
+    <p>=> Test1 이벤트 흐름</p>
+    <form onclick="alert('form')">
+      FORM
+      <div onclick="alert('div')">
+        DIV
+        <p onclick="alert('p')">P, 여기를 클릭해보세요 ~~</p>
+      </div>
+    </form>
+
+    <div>
+      <p>=> Test2 이벤트 흐름 3단계</p>
+      <table border="1">
+        <tbody>
+          <tr>
+            <td>Shady Grove</td>
+            <td>Aeolian</td>
+          </tr>
+          <tr>
+            <td onclick="alert('** Target Click !!! **')">
+              Over the River, Charlie
+            </td>
+            <td>Dorian</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p>=> Test3 이벤트 위임: li 중 아무거나 클릭해보세요 !!!</p>
+    <ul
+      id="post-list"
+      onclick="alert('** 이벤트 위임 => '+event.target.id);
+                              event.target.style.color='red'"
+    >
+      <li id="post-1">Item 1</li>
+      <li id="post-2">Item 2</li>
+      <li id="post-3">Item 3</li>
+      <li id="post-4">Item 4</li>
+      <li id="post-5">Item 5</li>
+      <li id="post-6">Item 6</li>
+    </ul>
+    <p>=> Test4 addEventListener(), Bubbling, Capturing</p>
+    <div id="ancestor">
+      <div id="parent">
+        <div id="child"></div>
+      </div>
+    </div>
+  </body>
+  <script>
+    const ancestor = document.querySelector("#ancestor");
+    const parent = document.querySelector("#parent");
+    const child = document.querySelector("#child");
+    // => addEventListener()의 3번째 매개변수 false 또는 없으면 버블리스너, true 이면 캡쳐리스너
+    //    아래 ancestor 처럼 두개 리스너 모두 작성하면 둘 모두 동시설정가능함
+    // ancestor.addEventListener("click", (e) => {
+    //   console.log('ancestor clicked, e.target =>'+e.target.id);
+    //   console.log('ancestor clicked, e.currentTarget =>'+e.currentTarget.id);
+    // }, false) //Bubbling
+
+    ancestor.addEventListener(
+      "click",
+      (e) => {
+        console.log("ancestor clicked");
+      },
+      true
+    ); //Capturing
+
+    parent.addEventListener(
+      "click",
+      (e) => {
+        console.log("parent clicked, e.target =>" + e.target.id);
+        console.log("parent clicked, e.currentTarget =>" + e.currentTarget.id);
+        //e.stopPropagation(); //e는 이벤트객체,
+        //}, false) //Bubbling
+      },
+      true
+    ); //Capturing
+
+    child.addEventListener(
+      "click",
+      (e) => {
+        console.log("child clicked, e.target =>" + e.target.id);
+        console.log("child clicked, e.currentTarget =>" + e.currentTarget.id);
+        //}, false) //Bubbling
+      },
+      true
+    ); //Capturing
+  </script>
+</html>

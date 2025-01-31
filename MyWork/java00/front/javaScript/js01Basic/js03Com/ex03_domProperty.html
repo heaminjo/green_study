@@ -5,27 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
+  <style>
+    p {
+      color: red;
+    }
+  </style>
   <script>
     let text1 = `문서 로딩 중 document.readyState = ${document.readyState}<br>`;
 
-    // function printProperties() {
-    //   document.getElementById("input").focus();
-    //   text1 += `1.location= ${document.location}<br>`;
-    //   text1 += `2.URL= ${document.URL}<br>`;
-    //   text1 += `3.title= ${document.title}<br>`;
-    //   text1 += `4.head.id= ${document.head.id}<br>`;
-    //   text1 += `5.domain= ${document.domain}<br>`;
-    //   text1 += `6.last= ${document.last}<br>`;
-    //   text1 += `7.lastModified= ${document.lastModified}<br>`;
-    //   text1 += `8.defaultView= ${document.defaultView}<br>`;
-    //   text1 += `9.문서 로딩 완료 후= ${document.readyState}<br>`;
-    //   text1 += `10.body.style.color= ${document.body.style.color}<br>`;
-    //   text1 += `11.= 이전페이지 url referrer${document.referrer}<br>`;
-    //   text1 += `12.activeElement= ${document.activeElement}<br>`;
-    //   text1 += `12.activeElement= ${document.documentElement.tagName}<br>`;
+    function printProperties() {
+      document.getElementById("input").focus();
+      text1 += `1.location= ${document.location}<br>`;
+      text1 += `2.URL= ${document.URL}<br>`;
+      text1 += `3.title= ${document.title}<br>`;
+      text1 += `4.head.id= ${document.head.id}<br>`;
+      text1 += `5.domain= ${document.domain}<br>`;
+      text1 += `6.last= ${document.last}<br>`;
+      text1 += `7.lastModified= ${document.lastModified}<br>`;
+      text1 += `8.defaultView= ${document.defaultView}<br>`;
+      text1 += `9.문서 로딩 완료 후= ${document.readyState}<br>`;
+      text1 += `10.body.style.color= ${document.body.style.color}<br>`;
+      text1 += `11.= 이전페이지 url referrer${document.referrer}<br>`;
+      text1 += `12.activeElement= ${document.activeElement}<br>`;
+      text1 += `12.activeElement= ${document.documentElement.tagName}<br>`;
 
-    //   alert(text1);
-    // }
+      alert(text1);
+    }
     function star() {}
 
     //3. 복습, 별출력하기
@@ -44,21 +49,6 @@
         if (count == 0) add = true;
       }
     } //star
-    // function printPTag() {
-    //   let p = document.getElementById("firspP");
-    //   let text = `1.p.id=${p.id} \n`;
-    //   text += `2.tagName=${p.tagName}\n`;
-    //   text += `3.innerHTML=${p.innerHTML}\n`;
-    //   text += `4.innerText=${p.innerText}\n`;
-    //   text += `5.style.color=${p.style.color}\n`;
-    //   text += `6.onclick=${p.onclick}\n`;
-    //   text += `7.childElementCount=${p.childElementCount}\n`;
-    //   text += `8.offsetWidth=${p.offsetWidth}\n`;
-    //   text += `9.offsetheight=${p.offsetHeight}\n`;
-
-    //   alert(text);
-    // }
-    // printProperties();
   </script>
   <body onload="printProperties()">
     <hr />
@@ -68,8 +58,49 @@
       <input type="text" id="input" value="여기에 포커스">
       <p id="firstP" onclick="printPTag()">이것은 <span style="color:brown">p tag</span>입니다.<span style="color:brown">p Tag 입니다</span></p>
     </h3> -->
-    <p id="starText"></p>
+    <p style="width: 100px" id="firspP">
+      gd
+      <span>sd</span>
+      <input type="text" name="" id="" />
+    </p>
     <button id="btn" onclick="star()">Star</button>
     <!-- </pre> -->
   </body>
+  <script>
+    // function printPTag() {
+    //   let p = document.getElementById("firspP");
+    //   let text = `1.p.id=${p.id} \n`;
+    //   text += `2.tagName=${p.tagName}\n`;
+    //   text += `3.innerHTML=${p.innerHTML}\n`;       //문서 태그
+    //   text += `4.innerText=${p.innerText}\n`;       //텍스트
+    //   text += `5.style.color=${p.style.color}\n`;
+    //   text += `6.onclick=${p.onclick}\n`;
+    //   text += `7.childElementCount=${p.childElementCount}\n`; // 자식 요소 개수
+    //   text += `8.offsetWidth=${p.offsetWidth}\n`;             //박스 크기
+    //   text += `9.offsetheight=${p.offsetHeight}\n`;         //박스 높이
+
+    //   alert(text);
+    // }
+    // printPTag();
+
+    function printProperties() {
+      document.getElementById("input").focus();
+      text1 += `1.location= ${document.location}<br>`;
+      text1 += `2.URL= ${document.URL}<br>`;
+      text1 += `3.title= ${document.title}<br>`;
+      text1 += `4.head.id= ${document.head.id}<br>`;
+      text1 += `5.domain= ${document.domain}<br>`;
+      text1 += `6.last= ${document.last}<br>`;
+      text1 += `7.lastModified= ${document.lastModified}<br>`;
+      text1 += `8.defaultView= ${document.defaultView}<br>`;
+      text1 += `9.문서 로딩 완료 후= ${document.readyState}<br>`;
+      text1 += `10.body.style.color= ${document.body.style.color}<br>`;
+      text1 += `11.= 이전페이지 url referrer${document.referrer}<br>`;
+      text1 += `12.activeElement= ${document.activeElement}<br>`;
+      text1 += `12.activeElement= ${document.documentElement.tagName}<br>`;
+
+      alert(text1);
+    }
+    printProperties();
+  </script>
 </html>

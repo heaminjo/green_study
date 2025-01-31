@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script>
+    // onload = () => {
+    //   p = document.getElementById("text");
+    //   document.write(`${p.id}<br>`);
+    //   document.write(`${p.tagName}<br>`);
+    //   document.write(`${p.innerHTML}<br>`);
+    //   document.write(`${p.style.color}`);
+    // };
+
+    // onload = () => {
+    //   let p = document.getElementById("text");
+    //   p.addEventListener("click", () => {
+    //     p.style.backgroundColor = "red";
+    //     p.style.width = "200px";
+    //   });
+    // };
+
+    onload = () => {
+      let liList = document.getElementsByTagName("li");
+
+      let text;
+      for (let i = 0; i < liList.length; i++) {
+        text += liList.item(i).innerText;
+      }
+
+      document.write(text);
+    };
+  </script>
+  <body>
+    <p id="text" style="color: red">
+      hello
+      <span>안녕</span>
+    </p>
+
+    <ul>
+      <li>11</li>
+      <li>22</li>
+      <li>33</li>
+      <li>44</li>
+      <li>55</li>
+    </ul>
+  </body>
+</html>

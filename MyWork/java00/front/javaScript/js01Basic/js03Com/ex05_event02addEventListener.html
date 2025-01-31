@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script>
+    onload = () => {
+      let p = document.getElementById("text");
+      p.addEventListener("mouseover", over);
+      p.addEventListener("mouseout", out);
+
+      p.addEventListener("mouseover", function () {
+        this.style.backgroundColor = "black";
+      });
+      p.addEventListener("mouseout", function () {
+        this.style.backgroundColor = "white";
+      });
+    };
+    function over() {
+      this.style.color = "red";
+    }
+    function out() {
+      this.style.color = "black";
+    }
+  </script>
+  <body>
+    <pre onclick="alert('pre')"><h3 onclick="alert('h3')">
+    <p id="text">마우스 올리면 textColor change</p>
+  </h3></pre>
+  </body>
+</html>
