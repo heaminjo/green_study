@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script>
+    function func1(x, ...rest) {
+      for (let i = 0; i < arguments.length; i++) {
+        console.log(`아규 : ${arguments[i]}`);
+      }
+      for (let i = 0; i < rest.length; i++) {
+        console.log(`레스트 : ${rest[i]}`);
+      }
+    }
+    func1(1, 2, 4, 5, 4);
+
+    let person = {
+      name: "조해민",
+      age: 24,
+      gender: "여자",
+    };
+
+    let { name, gender } = person;
+
+    console.log(name, gender);
+  </script>
+  <body></body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script>
+    function test1(pp) {
+      if (arguments[1]) return pp + arguments[1];
+      else return arguments[0];
+    }
+    console.log(`test 인자 1개 ${test1(11)}`);
+    console.log(`test 인자 2개 ${test1(11, 22)}`);
+    console.log(`test 인자 3개 ${test1(11, 22, 33)}`);
+
+    function test3() {
+      let sum = 0;
+      for (let i = 0; i < arguments.length; i++) {
+        sum += arguments[i];
+      }
+      return sum;
+    }
+    console.log(test3(11, 22, 33, 4));
+
+    function test4(pp, ...args) {
+      console.log(`${pp},${args[0]},${args[1]}`);
+    }
+    test4(1, 2, 3, 4);
+
+    function test5(pp, ...args) {
+      let sum = pp;
+      for (let i = 0; i < args.length; i++) {
+        sum += args[i];
+      }
+      return sum;
+    }
+    console.log(test5(10, 20, 30, 40, 50));
+
+    function defaultTest1(name, menu) {
+      console.log(`${name}은 점심으로 ${menu}를 먹는다.`);
+    }
+
+    function defaultTest2(name = "익명", menu = "밥") {
+      console.log(`${name}은 점심으로 ${menu}를 먹는다.`);
+    }
+    defaultTest2();
+  </script>
+  <body></body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>** Close Child **</title>
+</head>
+<body>
+  <h3>** Close Child **</h3>
+  => Parent 에서 Open 한 Window 입니다.<br>
+  => Parent Window: opener <br>
+  => 자신(this Window) : window, self
+  <hr>
+  <a href="javascript:opener.close()">Opener_Parent Close</a><br>
+  <a href="javascript:opener.document.querySelector('h3').style.color='Red'">Opener StyleChange Test</a><br>
+  <a href="javascript:window.close()">Window Close</a><br>
+  <a href="javascript:window.close()">Window Close</a><br>
+  <a href="javascript:self.close()">Self Close</a><br>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>** Window Close **</title>
+  <script>
+    "use strict"
+    let newWindow=null;
+
+    function winLoad(url) {
+      newWindow=window.open(url, 'myWin', 'left=500, top=50, width=500, height=400');
+    }
+
+    function winUnload() {
+      //=> newWindow 의 open 확인후 close 
+      //  - Open 하지않은 상태에서 close() 하면 오류 발생
+      //  - ~ Cannot read properties of null (reading 'close')
+      //=> window 의 closed 속성, true/false
+      //=> return: function 내부에서 return 은 무조건 function 종료
+      if ( newWindow==null || newWindow.closed ) return;
+      else newWindow.close(); 
+    }
+  </script>
+</head>
+<body>
+  <h3>** Window Close **</h3>
+  => Window 스스로 닫는경우 와 Child_Window 를 닫는경우<br>
+  => Child_Window : 자신이 생성한 Window<br>
+  <hr>
+  <a href="javascript:winLoad('ex02_closeChild.html')">New_Window Open</a><br>
+  <a href="javascript:winUnload()">New_Window Close</a><br>
+  <a href="javascript:window.close()">This_Window Close</a><br>
+</body>
+</html>

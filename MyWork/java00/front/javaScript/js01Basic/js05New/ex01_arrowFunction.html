@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>** 화살표함수, Arrow_Functions **</title>
+    <script>
+      //Test. 화살표함수와 this
+      // 1) 객체의 메서드 정의
+      //=> 일반함수
+      // let gang = {
+      //   resorts: ["강릉", "속초", "동해", "설악산"],
+      //   print: function () {
+      //     console.log(`** print Test1 gang => ${this.resorts.join(",")}`);
+      //   }, //print
+      // }; //gang
+      // gang.print();
+
+      // => 화살표 함수란 화살표 기호(=>)를 활용하여 간단하게 함수를 정의할수 있는 JS 문법
+      //      (인자) => {...}  형태로 편리하게 사용가능
+
+      //   => 제한사항
+      //   - methods(객체의 속성) 정의에도 사용될수 있으나,
+      //     this에 대한 바인딩이 없어 소속된 객체를 바인딩하지 못함
+      //   - 함수 자체의 this 바인딩을 가지고 있지 않기 때문에 상위 스코프의 this를 참조함.
+      //     위 2) this 심화예제 의 콜백함수로 사용된 경우 참고할것
+
+      //   - 생성자(Constructor) 함수로 사용할 수 없음.
+      //=> 화살표함수
+      let jeju2 = {
+        resorts: ["서귀포", "유채밭", "월정리", "한라산"],
+        print: function (delay = 1000) {
+          console.log(`** print Test1 jeju => ${this.resorts.join(",")}`);
+          setTimeout(function () {
+            console.log(this);
+          }, delay);
+        }, //print
+      }; //gang
+      jeju2.print();
+
+      //2) this 심화 예제
+      //=> 일반 함수로 정의한 객체의 메서드내에서 콜백함수를 사용하면서
+      //   이 콜백함수를 일반함수로 정의하는 경우와
+      //   화살표함수로 정의하는 경우 this 값 비교
+    </script>
+  </head>
+  <body>
+    <h3>** 화살표함수, Arrow_Functions **</h3>
+    <pre>
+      => 화살표 함수란 화살표 기호(=>)를 활용하여 간단하게 함수를 정의할수 있는 JS 문법
+         (인자) => {...}  형태로 편리하게 사용가능
+      
+      => 제한사항	
+      - methods(객체의 속성) 정의에도 사용될수 있으나,
+        this에 대한 바인딩이 없어 소속된 객체를 바인딩하지 못함
+        단, 위 2) this 심화예제 의 콜백함수로 사용된 경우와 다름에 주의할것 
+         
+      - 생성자(Constructor) 함수로 사용할 수 없음.
+
+      => 예시
+      // 매개변수가 없는 경우 : 괄호 생략 불가능
+      let foo = () => console.log('bar');
+      // let foo = function() { console.log('bar'); }
+      foo(); // bar
+      
+      // 매개변수, 실행문 하나인 경우 : 괄호, 중괄호 생략가능 (중괄호 생략되면 return 도 생략됨)
+      //=> let foo = function(x) { return x ; }
+      let foo = x => x;
+      foo('bar'); // bar
+	
+      // 매개변수가 여러개인 경우 : 괄호생략 불가능 
+      // body 의 실행문이 1문장 이면 {   } 생략가능
+      let foo = (a, b) => a + b; // 간단하게 한줄로 표현할 땐 "{}", return 없이 값이 반환됩니다.
+      foo(1, 2); // 3
+      
+      let foo = (a, b) => { return a + b }; //"{}"를 사용하면 return 생략불가능
+      foo(1, 2); // 3
+      
+      let foo = (a, b) => { a + b }; // "{}"를 사용했는데 return이 없을 때 
+      foo(1, 2); // undefined
+      
+      let foo = (a, b) => { // 여러줄 썼을 때
+        let c = 3;
+        return a + b + c;
+      }
+      foo(1, 2, 3) // 6
+  </pre
+    >
+  </body>
+</html>

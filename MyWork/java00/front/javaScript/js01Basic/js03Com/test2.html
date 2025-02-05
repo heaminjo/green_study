@@ -22,22 +22,63 @@
     //   });
     // };
 
-    onload = () => {
-      let liList = document.getElementsByTagName("li");
+    // onload = () => {
+    //   let liList = document.getElementsByTagName("li");
 
-      let text;
-      for (let i = 0; i < liList.length; i++) {
-        text += liList.item(i).innerText;
-      }
+    //   let text;
+    //   for (let i = 0; i < liList.length; i++) {
+    //     text += liList.item(i).innerText;
+    //   }
 
-      document.write(text);
-    };
+    //   document.write(text);
+    // };
+
+    // 화살표 함수로 this 바인딩
+    // const cat = {
+    //   name: "meow",
+    //   foo1: function () {
+    //     const foo2 = () => {
+    //       console.log(this.name);
+    //     };
+    //     foo2();
+    //   },
+    // };
+
+    // cat.foo1();
+
+    // 선언 함수로 하였을 때 this로 하면 메소드 상위인 cat객체의 name을 this로 가져온다다
+    // const cat = {
+    //   name: "meow",
+    //   callName: function () {
+    //     console.log(this.name);
+    //   },
+    // };
+    // cat.callName();
+
+    // function normalFunction() {
+    //   console.log(this);
+    // }
+
+    // const obj = { method: normalFunction };
+
+    // normalFunction(); // 일반 호출 → `this`는 전역 객체 (브라우저: window, Node.js: global)
+    // obj.method();
+
+    // const person = {
+    //   name: "joheamin",
+    //   info: function () {
+    //     console.log(this.name);
+    //     const info2 = function () {
+    //       console.log(this);
+    //     };
+    //     info2();
+    //   },
+    // };
+
+    // person.info();
   </script>
   <body>
-    <p id="text" style="color: red">
-      hello
-      <span>안녕</span>
-    </p>
+    <p id="text">hello</p>
 
     <ul>
       <li>11</li>
@@ -47,4 +88,28 @@
       <li>55</li>
     </ul>
   </body>
+  <script>
+    onload = () => {
+      // let p = document.getElementById("text");
+
+      // p.onclick = function () {
+      //   this.style.color = "red";
+      // };
+
+      console.log(this);
+    };
+
+    const person = {
+      name: "홍길동",
+      method: function () {
+        name: "김철수";
+        console.log("일반:" + this.name);
+        func2 = () => {
+          console.log("화살표:" + this.name);
+        };
+        func2();
+      },
+    };
+    person.method();
+  </script>
 </html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script>
+    "use strict";
+    let st01 = { id: "apple", name: "스티브", age: 25 };
+    let st02 = { phone: "01012341234", addr: "경기도" };
+    let st03 = { st01, st02, score: 100 };
+    let st04 = { ...st01, st02, score: 100 };
+    let st05 = { ...st01, ...st02, score: 100 };
+
+    console.log(`3 = ${JSON.stringify(st03)}`);
+    console.log(`4 = ${JSON.stringify(st04)}`);
+    console.log(`5 = ${JSON.stringify(st05)}`);
+
+    let sandWich = {
+      bread: "통밀빵",
+      meat: "참치",
+      cheese: "아메리칸 치즈",
+      toppings: ["샐러리", "토마토", "머스타드"],
+    };
+
+    {
+      let { id, name, score, st02 } = st04;
+      let { phone } = st02;
+      console.log(
+        `id : ${id} / name : ${name} / phone : ${phone} / score : ${score}`
+      );
+    }
+    let { bread, meat } = sandWich;
+    console.log(bread, meat);
+
+    bread = "소금빵";
+    meat = "한우";
+    console.log(bread, meat);
+    console.log(sandWich.bread, sandWich.meat);
+
+    let x = 10,
+      y = 10;
+    let oldObj = {
+      x: x,
+      y: y,
+      print: function () {
+        console.log(`oldObj print: x= ${this.x} , y= ${this.y}`);
+      },
+    };
+    oldObj.print();
+    console.log(`oldObj print: x=${oldObj.x} , y=${oldObj.y}`);
+
+    let xx = 10,
+      yy = 10;
+    let newObj = {
+      xx,
+      yy,
+      print: function () {
+        console.log(`oldObj print: x= ${this.xx} , y= ${this.yy}`);
+      },
+    };
+    newObj.print();
+  </script>
+  <body></body>
+</html>
