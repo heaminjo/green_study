@@ -15,6 +15,81 @@
     myMap.set("5", "Script");
 
     console.log(myMap);
+
+    myMap.set("3", "바꿈");
+    console.log(myMap);
+
+    myMap.set("7", "바티스");
+    console.log(myMap);
+
+    myMap.delete("4");
+    console.log(myMap);
+
+    console.log(myMap.has("5"));
+
+    for (let i of myMap) {
+      console.log(`key : ${i[0]} , value : ${i[1]}`);
+    }
+
+    myMap.clear();
+    console.log(myMap.size);
+
+    myMap2 = new Map([
+      ["a", 111],
+      ["b", 222],
+      ["c", 333],
+    ]);
+    console.log(myMap2.get("a") + myMap2.get("b") + myMap2.get("c"));
+    console.log(myMap.get("s"));
+
+    myMap2.delete("b");
+    console.log(myMap2.has("b"));
+
+    for (let m of myMap2) {
+      console.log(`key: ${m[0]} | value : ${m[1]}`);
+    }
+
+    for (const [key, value] of myMap2) {
+      console.log(`key: ${key} | value : ${value}`);
+    }
+
+    for (const v of myMap2.values()) {
+      console.log(`v : ${v}`);
+    }
+    for (const e of myMap2.entries()) {
+      console.log(`e : ${e}`);
+    }
+
+    myMap2.forEach((value, key, map) => {
+      console.log(
+        `key : ${key} | value : ${value} | map : ${map} | this : ${this}`
+      );
+    }, myMap2);
+    myMap2.forEach(function (value, key) {
+      console.log(`key : ${key} | value : ${value}  | this : ${this}`);
+    }, myMap2);
+
+    const mapArr = Array.from(myMap2);
+    mapArr.forEach((m) => {
+      console.log(m);
+    });
+
+    console.log(Array.isArray(mapArr));
+    console.log(mapArr);
+
+    // let testMap = new Map(mapArr);
+    // console.log(testMap);
+
+    // mapArr = Array.from(testMap);
+    localStorage.setItem("test01", JSON.stringify(mapArr));
+
+    const getArr = JSON.parse(localStorage.getItem("test01"));
+
+    let getMap = new Map(getArr);
+
+    getMap.forEach((value, key) => {
+      console.log(`key : ${key} | value : ${value}`);
+    });
   </script>
   <body>
     <pre>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      "use scrict";
+
+      let mySet = new Set();
+
+      let arr = ["첫번째", "두번째", "세번째", "네번째", "다벗번째"];
+
+      arr.forEach((m) => {
+        mySet.add(m);
+      });
+
+      mySet.forEach((v1, v2, v3) =>
+        console.log(
+          `현재 요소값: ${v1} | 현재 인덱스 : ${v2} | 현재 객체 : ${v3}`
+        )
+      );
+
+      mySet.delete("네번째");
+      mySet.forEach((v1, v2, v3) =>
+        console.log(
+          `현재 요소값: ${v1} | 현재 인덱스 : ${v2} | 현재 객체 : ${v3}`
+        )
+      );
+
+      console.log(mySet.delete("없는 값"));
+    </script>
+  </head>
+  <body></body>
+</html>

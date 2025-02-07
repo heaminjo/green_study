@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script>
+    let name = "홍길동";
+    console.log(name.length);
+
+    console.log(name[1]);
+
+    let s = "200";
+    let q = 10;
+    console.log(s.replace("world", "lady"));
+
+    console.log(s.replace(/L/i, "*"));
+
+    console.log(s.concat(q));
+
+    let str = "helloworld";
+    console.log(str.substring(2, 6));
+
+    mMap = new Map([
+      ["1", 111],
+      ["2", 22],
+      ["3", 55],
+    ]);
+    myMap2 = new Map([
+      ["a", 111],
+      ["b", 222],
+      ["c", 333],
+    ]);
+    mMap.forEach((v, k) => {
+      console.log(k, v);
+    });
+
+    localStorage("test01", JSON.stringify(Array.from(mMap)));
+  </script>
+  <body></body>
+</html>

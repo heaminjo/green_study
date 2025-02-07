@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script>
+    "use strict";
+
+    const s1 = {
+      name: "홍길동1",
+      phone: "000-1111-1111",
+    };
+    const s2 = {
+      name: "홍길동2",
+      phone: "004-1111-2222",
+    };
+    const s3 = {
+      name: "홍길동3",
+      phone: "013-5555-5555",
+    };
+
+    let kMap = new Map();
+
+    kMap.set("학생 1", s1);
+    kMap.set("학생 2", s2);
+    kMap.set("학생 3", s2);
+
+    // kMap.forEach((v, k) => {
+    //   console.log(`key : ${v} | value : ${id}`);
+    // });
+
+    kMap.forEach(({ name, phone }, k) => {
+      console.log(`${k} - 이름 : ${name} | 번호 : ${phone}`);
+    });
+
+    function Student(name, phone) {
+      this.name = name;
+      this.phone = phone;
+      this.infoPrint = function () {
+        console.log(`이름 : ${this.name} | 번호 : ${this.phone}`);
+      };
+    }
+
+    const st1 = new Student("홍길동", "000-2222-1111");
+    const st2 = new Student("노진구", "000-3333-3333");
+    const st3 = new Student("이유리", "000-4444-5555");
+    const st4 = new Student("김영희", "000-6666-7777");
+    const st5 = new Student("김철수", "000-8888-9999");
+
+    let sMap = new Map();
+
+    sMap.set("banana", st1);
+    sMap.set("orange", st2);
+    sMap.set("melon", st3);
+    sMap.set("grape", st4);
+    sMap.set("apple", st5);
+
+    sMap.forEach(({ name, phone }) => {
+      console.log(name, phone);
+    });
+  </script>
+  <body></body>
+</html>
