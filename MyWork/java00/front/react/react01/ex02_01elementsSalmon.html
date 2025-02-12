@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="react-container"></div>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+    <script>
+      const dish = React.createElement(
+        "section",
+        { id: "baked_salmon" },
+        React.createElement("h1", null, "Baked_Salmon 재료"),
+        React.createElement(
+          "ul",
+          { className: "ingredients" },
+          React.createElement("li", null, "연어 500 그램"),
+          React.createElement("li", null, "잣 1컵"),
+          React.createElement("li", null, "버터 상추 2 컵"),
+          React.createElement("li", null, "옐로 스쿼시"),
+          React.createElement("li", null, "올리브 오일"),
+          React.createElement("li", null, "마늘 3 쪽쪽")
+        )
+      );
+
+      ReactDOM.render(dish, document.getElementById("react-container"));
+    </script>
+  </body>
+</html>
